@@ -1,0 +1,29 @@
+.profile__btn_action_edit {
+  background-image: url(../../../../images/profile-btn-edit.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #fff;
+  background-size: 60%;
+
+  width: 24px;
+  height: 24px;
+  align-self: center;
+
+  opacity: 1;
+  -webkit-transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -o-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
+.profile__btn_action_edit:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 730px) {
+  .profile__btn_action_edit {
+    width: 18px;
+    height: 18px;
+    margin: auto;
+  }
+}

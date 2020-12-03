@@ -1,0 +1,28 @@
+.profile__btn_action_add {
+  background-image: url(../../../../images/profile-btn-add.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #fff;
+  border-radius: 2px;
+
+  width: 150px;
+  height: 50px;
+  align-self: center;
+
+  opacity: 1;
+  -webkit-transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -o-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
+.profile__btn_action_add:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 770px) {
+  .profile__btn_action_add {
+    width: 100%;
+    margin-top: 36px;
+  }
+}

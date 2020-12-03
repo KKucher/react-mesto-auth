@@ -1,0 +1,24 @@
+.photo-grid__btn_action_del {
+  width: 18px;
+  height: 19px;
+
+  background-image: url(../../../../images/photo-grid-btn-delete.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  position: absolute;
+  top: 18px;
+  right: 15px;
+
+  opacity: 1;
+  -webkit-transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -o-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
+.photo-grid__btn_action_del:hover {
+  cursor: pointer;
+  opacity: .6;
+}

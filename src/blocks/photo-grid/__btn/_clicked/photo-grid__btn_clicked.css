@@ -1,0 +1,7 @@
+.photo-grid__btn_clicked {
+  background-image: url(../../../../images/photo-grid-btn-like-clicked.svg);
+}
+
+.photo-grid__btn_clicked:hover {
+  opacity: 1;
+}

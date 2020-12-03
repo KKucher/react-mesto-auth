@@ -1,0 +1,20 @@
+.photo-grid__btn_action_like {
+  width: 20px;
+  height: 20px;
+
+  background-image: url(../../../../images/photo-grid-btn-like.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  opacity: 1;
+  -webkit-transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -o-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
+.photo-grid__btn_action_like:hover {
+  cursor: pointer;
+  opacity: .6;
+}
