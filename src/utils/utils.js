@@ -1,12 +1,12 @@
-export const validationObject = {
-  formSelector: ".popup__form",
-  inputSelector: ".popup__input",
-  submitButtonSelector: ".popup__btn",
-  inactiveButtonClass: "popup__btn_disabled",
-  inputErrorClass: "popup__input_type_error",
-  errorClass: "popup__error_visible",
+export const apiOptions = {
+  baseUrl: "https://mesto.nomoreparties.co/v1/cohort-15",
+  headers: {
+    authorization: "805da766-1e17-442b-aa98-c904fbf55e62",
+    "Content-Type": "application/json",
+  },
 };
 
-export const templateId = "#card-template";
+export const baseUrl = "https://auth.nomoreparties.co";
 
-export const cardListSelector = ".photo-grid__list";
+export const checkResponse = (res) =>
+  res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);

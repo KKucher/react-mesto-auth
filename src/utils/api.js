@@ -1,3 +1,5 @@
+import { apiOptions, checkResponse } from "./utils";
+
 class Api {
   constructor(options) {
     this._token = options.baseUrl;
@@ -14,13 +16,7 @@ class Api {
       headers: {
         authorization: this._authorization,
       },
-    }).then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-
-      return Promise.reject(`Ошибка: ${res.status}`);
-    });
+    }).then(checkResponse);
   }
 
   //***************************************************************************
@@ -32,13 +28,7 @@ class Api {
       headers: {
         authorization: this._authorization,
       },
-    }).then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-
-      return Promise.reject(`Ошибка: ${res.status}`);
-    });
+    }).then(checkResponse);
   }
 
   //***************************************************************************
@@ -55,13 +45,7 @@ class Api {
         name: name,
         about: about,
       }),
-    }).then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-
-      return Promise.reject(`Ошибка: ${res.status}`);
-    });
+    }).then(checkResponse);
   }
 
   //***************************************************************************
@@ -78,13 +62,7 @@ class Api {
         name: name,
         link: link,
       }),
-    }).then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-
-      return Promise.reject(`Ошибка: ${res.status}`);
-    });
+    }).then(checkResponse);
   }
 
   //***************************************************************************
@@ -97,13 +75,7 @@ class Api {
         authorization: this._authorization,
         "Content-Type": this._contentType,
       },
-    }).then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-
-      return Promise.reject(`Ошибка: ${res.status}`);
-    });
+    }).then(checkResponse);
   }
 
   //***************************************************************************
@@ -116,13 +88,7 @@ class Api {
         authorization: this._authorization,
         "Content-Type": this._contentType,
       },
-    }).then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-
-      return Promise.reject(`Ошибка: ${res.status}`);
-    });
+    }).then(checkResponse);
   }
 
   //***************************************************************************
@@ -138,22 +104,9 @@ class Api {
       body: JSON.stringify({
         avatar: `${avatar}`,
       }),
-    }).then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-
-      return Promise.reject(`Ошибка: ${res.status}`);
-    });
+    }).then(checkResponse);
   }
 }
 
-//***************************************************************************
-// экземпляра класса Api
-export const api = new Api({
-  baseUrl: "https://mesto.nomoreparties.co/v1/cohort-15",
-  headers: {
-    authorization: "805da766-1e17-442b-aa98-c904fbf55e62",
-    "Content-Type": "application/json",
-  },
-});
+const api = new Api(apiOptions);
+export default api;
